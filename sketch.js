@@ -14,7 +14,7 @@ var gameState = 0;
 var score,mConstraint;
 
 function setup() {
-  createCanvas(displayWidth,displayHeight);
+  createCanvas(displayWidth,displayHeight-200);
   engine = Engine.create();
   world = engine.world;
   ground = new Ground(width/2,height,width,20);
@@ -36,13 +36,15 @@ function draw() {
     game.play();
     if(particles!=null){
     particles.display();
+    particles.score();
     }
-    console.log(gameState);
+    textSize(20);
+    fill("green");
+    text("SCORE:"+score,200,200);
+
   }
   drawSprites();
-  textSize(20);
-  fill("dark green");
-  text("SCORE:"+score,200,200);
+  
 }
 function mouseClicked(){
   particles= new Particle(mouseX,mouseY,50);
