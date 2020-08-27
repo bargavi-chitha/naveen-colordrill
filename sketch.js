@@ -36,6 +36,7 @@ function draw() {
     game.play();
     rect(650,100,450,30);
     fill("yellow");
+    textSize(30);
     text("PRESS HERE TO DROP BALL",450,110);
     if(particles!=null){
     particles.display();
@@ -43,7 +44,7 @@ function draw() {
     }
     textSize(20);
     fill("green");
-    text("SCORE:"+score,200,200);
+    text(player+"SCORE:"+score,200,200);
 
   }
   drawSprites();
