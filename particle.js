@@ -30,10 +30,10 @@ class Particle {
 
      pop();
      if ((this.body.position.x>150 && this.body.position.x<250)&& (this.body.position.y>450 && this.body.position.y<500)) {
-      if(this.a===this.b && this.c===random(0,255)){
+      if(((this.c>this.b) && (this.c>this.a) && (this.b>=this.a))||((this.a===this.b) && (this.c<this.a) && (this.c<this.b))){
       score=score+1;  
       }else{
-        count=count+1;
+        b++;
       }
       this.body.position.x=0;
       this.body.position.y=0;
@@ -41,10 +41,10 @@ class Particle {
   }
       else if ((this.body.position.x>550 && this.body.position.x<650)&& (this.body.position.y>450 && this.body.position.y<500)) {
       
-      if(this.a===random(0,255) && this.b===random(0,255) && this.c===0){
+      if(((this.a>this.b) && (this.a>this.c) && (this.b>=this.c))||((this.b>this.c) && (this.b>this.a) && (this.a>=this.c))){
         score = score + 1;
       }else{
-        count=count+1;
+        r++;
       }
         this.body.position.x=0;
       this.body.position.y=0;
@@ -54,7 +54,7 @@ class Particle {
         if(this.a===this.b && this.b===this.c && this.c=== this.a){
         score = score + 1;
         }else{
-          count=count+1;
+          c++;
         }
         this.body.position.x=0;
         this.body.position.y=0;

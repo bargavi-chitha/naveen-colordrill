@@ -12,7 +12,9 @@ var divitionHight = 300;
 var form,game,player;
 var gameState = 0;
 var score,mConstraint;
-var count=0;
+var r=0;
+var b=0;
+var c=0;
 
 function setup() {
   createCanvas(displayWidth,displayHeight-200);
@@ -33,6 +35,7 @@ function draw() {
 
   Engine.update(engine);
   ground.display();
+  
   if(gameState === 1) {
     game.play();
     rect(650,100,450,30);
@@ -44,9 +47,12 @@ function draw() {
     
     }
     textSize(20);
-    fill("green");
-    text(player+"SCORE:"+score,200,200);
-   // text(player+"SCORE:"+count,200,250);
+    fill("black");
+    text("Player:"+player,1000,50);
+    text("Score:"+score,1000,75);
+    text("Red-green color blindness:"+r,1000,100);
+    text("Blue-yellow color blindness:"+b,1000,125);
+    text("Complete color blindness:"+c,1000,150);
 
   }
   drawSprites();
