@@ -34,9 +34,12 @@ function draw() {
   ground.display();
   if(gameState === 1) {
     game.play();
+    rect(650,100,450,30);
+    fill("yellow");
+    text("PRESS HERE TO DROP BALL",450,110);
     if(particles!=null){
     particles.display();
-    particles.score();
+    
     }
     textSize(20);
     fill("green");
@@ -47,6 +50,9 @@ function draw() {
   
 }
 function mouseClicked(){
+if((mouseX>600 && mouseX<700)&& (mouseY>70 && mouseY<130)){
   particles= new Particle(mouseX,mouseY,50);
-  console.log(color);
+
+}
+
   }
