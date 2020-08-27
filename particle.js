@@ -29,15 +29,15 @@ class Particle {
      if ((this.body.position.x>150 && this.body.position.x<250)&& (this.body.position.y>450 && this.body.position.y<500)) {
       score=score+1;  
     
-      World.remove(world,this.body);                           
+      World.remove(world, this.body);                        
   }
       else if ((this.body.position.x>550 && this.body.position.x<650)&& (this.body.position.y>450 && this.body.position.y<500)) {
         score = score + 1;
-        World.remove(world,this.body); 
+        World.remove(world, this.body);
       }
       else if ((this.body.position.x>950 && this.body.position.x<1050)&& (this.body.position.y>450 && this.body.position.y<500)) {
         score = score + 1;
-        World.remove(world,this.body); 
+        World.remove(world, this.body);
       }
 
  }
