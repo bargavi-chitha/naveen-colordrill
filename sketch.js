@@ -4,7 +4,8 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 const MouseConstraint = Matter.MouseConstraint;
 const Mouse = Matter.Mouse;
-const Events = Matter.Events;
+const Events = Matter.Events; 
+
 var world,engine,ground;
 var particles;
 var division1,division2,division3;
@@ -31,8 +32,7 @@ function setup() {
   World.add(world, mConstraint);
 }
 function draw() {
-  background(255); 
-
+  background("lightBlue"); 
   Engine.update(engine);
   ground.display();
   
@@ -44,10 +44,10 @@ function draw() {
     text("PRESS HERE TO DROP BALL",450,110);
     if(particles!=null){
     particles.display();
-    
     }
     textSize(20);
     fill("black");
+    stroke("black");
     text("Player:"+player,1000,50);
     text("Score:"+score,1000,75);
     text("Red-green color blindness:"+r,1000,100);
@@ -56,12 +56,10 @@ function draw() {
 
   }
   drawSprites();
-  
 }
+
 function mouseClicked(){
-if((mouseX>600 && mouseX<700)&& (mouseY>70 && mouseY<130)){
-  particles= new Particle(mouseX,mouseY,50);
-
-}
-
+  if((mouseX>600 && mouseX<700)&& (mouseY>70 && mouseY<130)){
+    particles= new Particle(mouseX,mouseY,50);
   }
+}
