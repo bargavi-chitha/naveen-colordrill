@@ -29,30 +29,23 @@ class Particle {
      pop();
      if ((this.body.position.x>150 && this.body.position.x<250)&& (this.body.position.y>450 && this.body.position.y<500)) {
       score=score+1;  
-      World.remove(world, this.body);
-     push();
-     this.Visiblity = this.Visiblity - 5;
-     tint(255,this.Visiblity);
-     ellipse(0,0,this.r,this.r);
-     pop();                     
+      
+      this.body.position.x=0;
+      this.body.position.y=0;
+                     
   }
       else if ((this.body.position.x>550 && this.body.position.x<650)&& (this.body.position.y>450 && this.body.position.y<500)) {
         score = score + 1;
-        World.remove(world, this.body);
-        push();
-     this.Visiblity = this.Visiblity - 5;
-     tint(255,this.Visiblity);
-     ellipse(0,0,this.r,this.r);
-     pop();  
+      
+        this.body.position.x=0;
+      this.body.position.y=0;
+       
       }
       else if ((this.body.position.x>950 && this.body.position.x<1050)&& (this.body.position.y>450 && this.body.position.y<500)) {
         score = score + 1;
-        World.remove(world, this.body);
-        push();
-     this.Visiblity = this.Visiblity - 5;
-     tint(255,this.Visiblity);
-     ellipse(0,0,this.r,this.r);
-     pop();  
+        
+        this.body.position.x=0;
+        this.body.position.y=0;
       }
 
  }
