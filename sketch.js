@@ -12,6 +12,7 @@ var divitionHight = 300;
 var form,game,player;
 var gameState = 0;
 var score,mConstraint;
+var count=0;
 
 function setup() {
   createCanvas(displayWidth,displayHeight-200);
@@ -45,6 +46,7 @@ function draw() {
     textSize(20);
     fill("green");
     text(player+"SCORE:"+score,200,200);
+   // text(player+"SCORE:"+count,200,250);
 
   }
   drawSprites();
